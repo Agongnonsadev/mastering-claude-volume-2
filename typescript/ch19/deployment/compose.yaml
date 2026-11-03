@@ -1,0 +1,36 @@
+# Chapter 19: the Comptoir online on a small server, behind Caddy, which obtains and renews
+# the HTTPS certificate by itself (Let's Encrypt). On the server, in this folder:
+#   cp .env.example .env   (then fill it in; chmod 600 .env)
+#   docker compose up -d --build
+services:
+  comptoir:
+    build:
+      context: ../..
+      dockerfile: ch19/deployment/Dockerfile
+      # Awa's data, shared by the two versions, are read in the python/ folder.
+      additional_contexts:
+        comptoir_python: ../../../python/comptoir
+    env_file: .env
+    volumes:
+      # A named volume, and not a folder of the server: Docker creates it with the image's permissions, and
+      # the container's unprivileged user can write to it. Backup: see backup.sh.
+      - comptoir_data:/data         # shop, conversations, budget, log
+    restart: unless-stopped
+    stop_grace_period: 30s          # the time to finish the queued messages (comptoir/online.ts)
+    # No published port: only Caddy reaches the Comptoir, through Docker's internal network.
+
+  caddy:
+    image: caddy:2.11.7
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      COMPTOIR_DOMAIN: ${COMPTOIR_DOMAIN}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+    restart: unless-stopped
+
+volumes:
+  comptoir_data:
+  caddy_data:

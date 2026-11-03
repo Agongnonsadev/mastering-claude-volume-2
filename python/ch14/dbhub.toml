@@ -1,0 +1,23 @@
+# Chapter 14: DBHub plugged into the exploration copy of Awa's orders, read-only.
+# Documentation: https://dbhub.ai/config/toml (read on October 21, 2026, DBHub 1.5.0).
+# The path must be absolute (a relative path is not found under Windows). CLAUDE_PROJECT_DIR is
+# the project's root: Claude Code gives it to the servers it launches, and ch14/servers.py too.
+
+[[sources]]
+id = "orders"
+dsn = "sqlite:///${CLAUDE_PROJECT_DIR}/customer_data/orders_exploration.sqlite3"
+
+# readonly: DBHub refuses anything that is not a read (SELECT, PRAGMA, EXPLAIN…), then runs
+# the query with PRAGMA query_only = ON, so that SQLite refuses a write too.
+# max_rows: a clumsy query does not send 10,000 lines into Claude's context.
+[[tools]]
+name = "execute_sql"
+source = "orders"
+readonly = true
+max_rows = 200
+
+# search_objects: the map of the database (tables, columns, indexes), so that Claude discovers it
+# without reading everything. Declaring [[tools]] replaces the default list: each tool wanted is named here.
+[[tools]]
+name = "search_objects"
+source = "orders"

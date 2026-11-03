@@ -1,0 +1,15 @@
+{
+  "name": "comptoir-online-chapter-19",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Chapter 19: what the image of the Comptoir online installs, and nothing else (pinned versions, hashes in package-lock.json)",
+  "type": "module",
+  "dependencies": {
+    "@anthropic-ai/sdk": "1.1.0",
+    "@hono/node-server": "2.1.5",
+    "hono": "4.13.13",
+    "tsx": "4.23.15",
+    "ws": "8.22.0",
+    "zod": "4.6.7"
+  }
+}

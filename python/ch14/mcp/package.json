@@ -1,0 +1,9 @@
+{
+  "name": "comptoir-mcp-servers",
+  "private": true,
+  "description": "Chapter 14: the Comptoir's third-party MCP servers, installed once, versions pinned by package-lock.json",
+  "dependencies": {
+    "@bytebase/dbhub": "1.5.0",
+    "@modelcontextprotocol/server-everything": "1.0.0"
+  }
+}

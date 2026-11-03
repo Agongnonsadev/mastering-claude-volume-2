@@ -1,0 +1,101 @@
+{
+  "_note": "Fictional data: Délices d'Awa and its suppliers are imaginary, created for “Mastering Claude”, Volume 2.",
+  "offers": [
+    {
+      "item": "Dried hibiscus flowers",
+      "supplier": "Coopérative des Collines",
+      "lead_time_days": 3,
+      "minimum": 5,
+      "pack_size": 1,
+      "price_fcfa": 3500
+    },
+    {
+      "item": "Fresh ginger",
+      "supplier": "Ferme des Collines",
+      "lead_time_days": 2,
+      "minimum": 10,
+      "pack_size": 5,
+      "price_fcfa": 1200
+    },
+    {
+      "item": "Fresh ginger",
+      "supplier": "Grossiste Tokpa",
+      "lead_time_days": 1,
+      "minimum": 5,
+      "pack_size": 5,
+      "price_fcfa": 1400
+    },
+    {
+      "item": "Sugarloaf pineapple",
+      "supplier": "Plantation d'Allada",
+      "lead_time_days": 7,
+      "minimum": 20,
+      "pack_size": 10,
+      "price_fcfa": 400
+    },
+    {
+      "item": "Soursop pulp",
+      "supplier": "Ferme Agbo",
+      "lead_time_days": 5,
+      "minimum": 5,
+      "pack_size": 1,
+      "price_fcfa": 2000
+    },
+    {
+      "item": "Cane sugar",
+      "supplier": "Sucrerie Atlantique",
+      "lead_time_days": 2,
+      "minimum": 25,
+      "pack_size": 25,
+      "price_fcfa": 650
+    },
+    {
+      "item": "Lime",
+      "supplier": "Ferme des Collines",
+      "lead_time_days": 2,
+      "minimum": 2,
+      "pack_size": 1,
+      "price_fcfa": 1000
+    },
+    {
+      "item": "Glass bottle 500 ml",
+      "supplier": "Verrerie du Port",
+      "lead_time_days": 3,
+      "minimum": 100,
+      "pack_size": 50,
+      "price_fcfa": 150
+    },
+    {
+      "item": "Glass bottle 500 ml",
+      "supplier": "Emballages Akwa",
+      "lead_time_days": 2,
+      "minimum": 50,
+      "pack_size": 50,
+      "price_fcfa": 180
+    },
+    {
+      "item": "Glass flask 500 ml",
+      "supplier": "Verrerie du Port",
+      "lead_time_days": 3,
+      "minimum": 50,
+      "pack_size": 25,
+      "price_fcfa": 200
+    },
+    {
+      "item": "Cap",
+      "supplier": "Emballages Akwa",
+      "lead_time_days": 2,
+      "minimum": 200,
+      "pack_size": 100,
+      "price_fcfa": 15
+    },
+    {
+      "item": "Label",
+      "supplier": "Imprimerie Lagune",
+      "lead_time_days": 4,
+      "minimum": 200,
+      "pack_size": 100,
+      "price_fcfa": 25
+    }
+  ]
+}

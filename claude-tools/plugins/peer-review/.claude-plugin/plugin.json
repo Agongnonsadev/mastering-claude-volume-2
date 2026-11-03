@@ -1,0 +1,11 @@
+{
+  "name": "peer-review",
+  "description": "A read-only reviewer subagent, and the /peer-review:review command, which review a diff against the project's rules (CLAUDE.md, .claude/rules/).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Botlyx Academy"
+  },
+  "dependencies": [
+    "secret-guard"
+  ]
+}

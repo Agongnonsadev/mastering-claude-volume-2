@@ -1,0 +1,271 @@
+setting,id,pass,expected,obtained,reason,by,cost_dollars,duration_s
+haiku,sunday,1,information,information,"Question sur les jours de livraison, sans demande d'achat",claude-haiku-5-5,0.00013,2.31
+haiku,sunday,2,information,information,"Question sur les jours de livraison, sans demande d'achat",claude-haiku-5-5,0.00013,1.38
+haiku,sunday,3,information,information,Question sur les jours de livraison,claude-haiku-5-5,0.000125,1.42
+haiku,soursop-sugar,1,information,information,"Question sur les ingrédients d'un produit, sans demande d'achat",claude-haiku-5-5,0.000132,1.65
+haiku,soursop-sugar,2,information,information,"Question sur les ingrédients d'un produit, sans demande d'achat",claude-haiku-5-5,0.000132,1.64
+haiku,soursop-sugar,3,information,information,"Question sur les ingrédients d'un produit, sans demande d'achat",claude-haiku-5-5,0.000132,1.01
+haiku,opened-syrup,1,information,information,Question sur la conservation du sirop après ouverture,claude-haiku-5-5,0.000129,1.58
+haiku,opened-syrup,2,information,information,Question sur la conservation d'un sirop ouvert,claude-haiku-5-5,0.00013,1.63
+haiku,opened-syrup,3,information,information,Question sur la conservation d'un sirop ouvert,claude-haiku-5-5,0.00013,1.59
+haiku,visa,1,information,information,Question sur les moyens de paiement acceptés,claude-haiku-5-5,0.000128,1.01
+haiku,visa,2,information,information,Question sur les moyens de paiement acceptés,claude-haiku-5-5,0.000128,1.52
+haiku,visa,3,information,information,Question sur les moyens de paiement acceptés,claude-haiku-5-5,0.000128,1.03
+haiku,workshop,1,information,information,"Question sur la localisation de l'atelier, sans achat",claude-haiku-5-5,0.000129,0.96
+haiku,workshop,2,information,information,"Question sur l'emplacement de l'atelier, sans demande d'achat",claude-haiku-5-5,0.000132,0.96
+haiku,workshop,3,information,information,"Question sur l'emplacement de l'atelier, sans demande d'achat.",claude-haiku-5-5,0.000132,0.91
+haiku,godomey,1,information,information,"Question sur la zone de livraison, sans demande d'achat",claude-haiku-5-5,0.00013,1.07
+haiku,godomey,2,information,information,"Question sur la zone de livraison, sans demande d'achat",claude-haiku-5-5,0.00013,1.08
+haiku,godomey,3,information,information,"Question sur la zone de livraison, sans demande d'achat",claude-haiku-5-5,0.00013,1.75
+haiku,pickup-french,1,information,information,"Question sur le retrait en atelier, sans demande d'achat",claude-haiku-5-5,0.00013,1.6
+haiku,pickup-french,2,information,information,"Question sur le retrait en atelier, sans demande d'achat",claude-haiku-5-5,0.00013,1.63
+haiku,pickup-french,3,information,information,"Question sur le retrait en atelier, sans demande d'achat",claude-haiku-5-5,0.00013,1.73
+haiku,data,1,information,information,Question sur la conservation des données personnelles,claude-haiku-5-5,0.000127,0.99
+haiku,data,2,information,information,"Question sur la conservation des données personnelles, sans demande d'achat.",claude-haiku-5-5,0.000131,1.06
+haiku,data,3,information,information,"Question sur la conservation des données personnelles, sans demande d'achat.",claude-haiku-5-5,0.000131,1.24
+haiku,wedding-lead-time,1,information,order,Question de délai pour une commande de mariage,claude-haiku-5-5,0.000128,0.9
+haiku,wedding-lead-time,2,information,order,Question de délai pour réserver une commande de mariage,claude-haiku-5-5,0.000129,1.22
+haiku,wedding-lead-time,3,information,order,Question de délai pour une commande de mariage,claude-haiku-5-5,0.000128,0.84
+haiku,hours,1,information,information,"Question sur les horaires de prise de commande, sans achat",claude-haiku-5-5,0.000131,1.16
+haiku,hours,2,information,information,Question sur les horaires de prise de commande,claude-haiku-5-5,0.000128,1.29
+haiku,hours,3,information,information,Question sur les horaires de prise de commande,claude-haiku-5-5,0.000128,1.13
+haiku,six-bissap,1,order,order,Demande d'achat de 6 bouteilles de bissap avec livraison,claude-haiku-5-5,0.000134,0.98
+haiku,six-bissap,2,order,order,Demande d'achat de 6 bouteilles de bissap avec livraison,claude-haiku-5-5,0.000134,1.09
+haiku,six-bissap,3,order,order,Demande d'achat de 6 bouteilles de bissap avec livraison,claude-haiku-5-5,0.000134,1.58
+haiku,pineapple-stock,1,order,order,Question de disponibilité du jus d'ananas aujourd'hui,claude-haiku-5-5,0.000132,1.74
+haiku,pineapple-stock,2,order,order,Question de disponibilité du stock de jus d'ananas,claude-haiku-5-5,0.000131,1.66
+haiku,pineapple-stock,3,order,order,Question de stock sur le jus d'ananas,claude-haiku-5-5,0.000129,1.61
+haiku,add-syrup,1,order,order,Le client veut ajouter des sirops à sa commande.,claude-haiku-5-5,0.00013,1.33
+haiku,add-syrup,2,order,order,Le client veut ajouter des produits à sa commande.,claude-haiku-5-5,0.00013,0.9
+haiku,add-syrup,3,order,order,Le client veut ajouter des sirops à sa commande.,claude-haiku-5-5,0.00013,0.93
+haiku,cancellation,1,order,order,Demande d'annulation d'une commande du matin,claude-haiku-5-5,0.000129,1.01
+haiku,cancellation,2,order,order,Demande d'annulation d'une commande du matin,claude-haiku-5-5,0.000129,1.63
+haiku,cancellation,3,order,order,Demande d'annulation d'une commande du matin,claude-haiku-5-5,0.000129,1.04
+haiku,baptism-quote,1,order,order,"Demande de devis pour 120 bouteilles, événement précis",claude-haiku-5-5,0.000134,1.06
+haiku,baptism-quote,2,order,order,"Demande de devis pour 120 bouteilles, pour un événement",claude-haiku-5-5,0.000134,0.95
+haiku,baptism-quote,3,order,order,"Demande de devis pour 120 bouteilles, événement précis",claude-haiku-5-5,0.000134,1.1
+haiku,discount-20,1,order,order,Demande de remise pour une quantité de 20 bouteilles,claude-haiku-5-5,0.000132,1.41
+haiku,discount-20,2,order,order,Demande de remise pour un achat de 20 bouteilles,claude-haiku-5-5,0.000131,1.35
+haiku,discount-20,3,order,order,Demande de remise sur une quantité de 20 bouteilles,claude-haiku-5-5,0.000132,1.42
+haiku,zone-then-order,1,order,order,Demande d'achat de 5 bouteilles avec question de livraison,claude-haiku-5-5,0.000134,1.51
+haiku,zone-then-order,2,order,order,Demande de livraison à une zone et achat de 5 bouteilles de gingembre,claude-haiku-5-5,0.000137,1.1
+haiku,zone-then-order,3,order,order,Demande de livraison à Cadjèhoun couplée à un achat de 5 bouteilles,claude-haiku-5-5,0.000139,1.58
+haiku,total,1,order,order,Demande de calcul de total pour une commande de jus,claude-haiku-5-5,0.00013,1.78
+haiku,total,2,order,order,Demande de calcul de total pour une commande de jus,claude-haiku-5-5,0.00013,1.67
+haiku,total,3,order,order,Demande de calcul de total pour une commande de jus,claude-haiku-5-5,0.00013,1.66
+haiku,address,1,order,order,Demande de modification de l'adresse de livraison d'une commande,claude-haiku-5-5,0.000132,1.48
+haiku,address,2,order,order,Demande de modification de l'adresse de livraison d'une commande.,claude-haiku-5-5,0.000132,1.39
+haiku,address,3,order,order,Demande de modification de l'adresse de livraison d'une commande,claude-haiku-5-5,0.000132,1.35
+haiku,confirmation,1,order,order,confirmation d'un récapitulatif,code,0.0,0.0
+haiku,confirmation,2,order,order,confirmation d'un récapitulatif,code,0.0,0.0
+haiku,confirmation,3,order,order,confirmation d'un récapitulatif,code,0.0,0.0
+haiku,lukewarm,1,complaint,complaint,"Bouteilles livrées tièdes, client mécontent d'une commande reçue",claude-haiku-5-5,0.000136,1.72
+haiku,lukewarm,2,complaint,complaint,"Bouteilles livrées tièdes, client mécontent",claude-haiku-5-5,0.000132,1.07
+haiku,lukewarm,3,complaint,complaint,"Bouteilles livrées tièdes, client mécontent",claude-haiku-5-5,0.000132,1.13
+haiku,missing-bottle,1,complaint,complaint,Bouteille manquante dans la livraison du matin,claude-haiku-5-5,0.00013,1.61
+haiku,missing-bottle,2,complaint,complaint,Bouteille manquante dans la livraison du matin,claude-haiku-5-5,0.00013,1.6
+haiku,missing-bottle,3,complaint,complaint,Bouteille manquante dans la livraison du matin,claude-haiku-5-5,0.00013,1.63
+haiku,rider,1,complaint,complaint,Retard de livraison et attitude impolie du livreur,claude-haiku-5-5,0.000131,1.03
+haiku,rider,2,complaint,complaint,Retard de livraison et attitude impolie du livreur,claude-haiku-5-5,0.000131,0.98
+haiku,rider,3,complaint,complaint,Retard de livraison et attitude impolie du livreur,claude-haiku-5-5,0.000131,1.18
+haiku,discomfort,1,complaint,complaint,Malaise d'un enfant après consommation d'un jus de gingembre,claude-haiku-5-5,0.000135,1.11
+haiku,discomfort,2,complaint,complaint,Malaise d'un enfant après consommation d'un jus de gingembre,claude-haiku-5-5,0.000135,1.1
+haiku,discomfort,3,complaint,complaint,Malaise d'un enfant après consommation d'un jus de gingembre,claude-haiku-5-5,0.000135,1.01
+haiku,mistake-and-order,1,complaint,complaint,Produit erroné reçu; le client demande aussi l'ananas manquant,claude-haiku-5-5,0.000137,0.9
+haiku,mistake-and-order,2,complaint,complaint,Produit erroné reçu ; client demande aussi un ajout de commande,claude-haiku-5-5,0.000137,1.67
+haiku,mistake-and-order,3,complaint,complaint,"Produit livré erroné (bissap au lieu d'ananas), réclamation prioritaire",claude-haiku-5-5,0.00014,1.56
+haiku,broken-bottle,1,complaint,complaint,"Bouteille cassée à la livraison, signalée par le client",claude-haiku-5-5,0.000132,1.04
+haiku,broken-bottle,2,complaint,complaint,"Bouteille cassée à la livraison, client demande un examen de la photo",claude-haiku-5-5,0.000134,1.6
+haiku,broken-bottle,3,complaint,complaint,"Bouteille cassée à la livraison, signalée par le client",claude-haiku-5-5,0.000132,1.08
+haiku,thanks,1,other,other,Simple remerciement et salutation sans demande,claude-haiku-5-5,0.000128,1.37
+haiku,thanks,2,other,other,"Simple remerciement et salutation, sans demande précise",claude-haiku-5-5,0.000129,1.47
+haiku,thanks,3,other,other,"Simple remerciement et salutation, sans demande particulière",claude-haiku-5-5,0.00013,1.46
+haiku,hiring,1,other,other,"Demande d'emploi, hors du commerce d'Awa",claude-haiku-5-5,0.00013,2.02
+haiku,hiring,2,other,other,"Demande d'emploi, hors du commerce d'Awa",claude-haiku-5-5,0.00013,1.03
+haiku,hiring,3,other,other,"Demande d'emploi hors du commerce, sans lien avec les produits",claude-haiku-5-5,0.000132,1.13
+haiku,injection,1,other,other,"Tentative de manipulation et demande du numéro personnel d'Awa, hors commerce",claude-haiku-5-5,0.000138,1.12
+haiku,injection,2,other,other,"Demande hors commerce : numéro personnel d'Awa, tentative de contournement des consignes",claude-haiku-5-5,0.000139,1.12
+haiku,injection,3,other,other,"Tentative de manipulation et demande du numéro personnel d'Awa, hors commerce",claude-haiku-5-5,0.000138,1.1
+haiku,song,1,other,other,"Demande hors du commerce d'Awa, une chanson sur le bissap",claude-haiku-5-5,0.000133,1.01
+haiku,song,2,other,other,"Demande hors du commerce, une chanson sur le bissap",claude-haiku-5-5,0.00013,1.07
+haiku,song,3,other,other,"Demande hors du commerce, une chanson sur le bissap.",claude-haiku-5-5,0.00013,0.99
+haiku-no-thinking,sunday,1,information,information,"Question sur les jours de livraison, sans demande d'achat",claude-haiku-5-5,0.000129,1.74
+haiku-no-thinking,sunday,2,information,information,"Question sur les jours de livraison, sans demande d'achat.",claude-haiku-5-5,0.000129,1.54
+haiku-no-thinking,sunday,3,information,information,"Question sur les jours de livraison, sans demande d'achat",claude-haiku-5-5,0.000129,1.5
+haiku-no-thinking,soursop-sugar,1,information,information,"Question sur les ingrédients d'un produit, sans demande d'achat.",claude-haiku-5-5,0.000132,1.02
+haiku-no-thinking,soursop-sugar,2,information,information,Question sur les ingrédients d'un produit,claude-haiku-5-5,0.000127,1.15
+haiku-no-thinking,soursop-sugar,3,information,information,"Question sur les ingrédients d'un produit, sans demande d'achat.",claude-haiku-5-5,0.000132,1.13
+haiku-no-thinking,opened-syrup,1,information,information,Question sur la conservation d'un sirop après ouverture,claude-haiku-5-5,0.00013,1.44
+haiku-no-thinking,opened-syrup,2,information,information,Question sur la conservation d'un sirop ouvert,claude-haiku-5-5,0.000129,1.05
+haiku-no-thinking,opened-syrup,3,information,information,Question sur la conservation d'un sirop ouvert,claude-haiku-5-5,0.000129,1.12
+haiku-no-thinking,visa,1,information,information,"Question sur les moyens de paiement acceptés, sans achat.",claude-haiku-5-5,0.00013,1.21
+haiku-no-thinking,visa,2,information,information,"Question sur les moyens de paiement acceptés, sans achat.",claude-haiku-5-5,0.00013,1.04
+haiku-no-thinking,visa,3,information,information,"Question sur les moyens de paiement acceptés, sans demande d'achat.",claude-haiku-5-5,0.000132,1.05
+haiku-no-thinking,workshop,1,information,information,"Question sur l'emplacement de l'atelier, sans demande d'achat",claude-haiku-5-5,0.000131,1.31
+haiku-no-thinking,workshop,2,information,information,"Question sur l'emplacement de l'atelier, sans demande d'achat",claude-haiku-5-5,0.000131,1.4
+haiku-no-thinking,workshop,3,information,information,"Question sur la localisation de l'atelier, sans demande d'achat",claude-haiku-5-5,0.00013,1.31
+haiku-no-thinking,godomey,1,information,information,"Question sur les zones de livraison, sans demande d'achat.",claude-haiku-5-5,0.000129,1.56
+haiku-no-thinking,godomey,2,information,information,"Question sur les zones de livraison, sans demande d'achat.",claude-haiku-5-5,0.000129,1.56
+haiku-no-thinking,godomey,3,information,information,"Question sur les zones de livraison, sans demande d'achat.",claude-haiku-5-5,0.000129,1.55
+haiku-no-thinking,pickup-french,1,information,information,"Question sur le retrait en atelier, sans demande d'achat",claude-haiku-5-5,0.00013,3.18
+haiku-no-thinking,pickup-french,2,information,information,"Question sur le retrait sur place, sans demande d'achat",claude-haiku-5-5,0.000129,1.36
+haiku-no-thinking,pickup-french,3,information,information,"Question sur le retrait en atelier, sans demande d'achat",claude-haiku-5-5,0.00013,1.09
+haiku-no-thinking,data,1,information,information,Question sur la conservation des données personnelles,claude-haiku-5-5,0.000126,1.56
+haiku-no-thinking,data,2,information,information,Question sur la conservation des données personnelles,claude-haiku-5-5,0.000126,1.15
+haiku-no-thinking,data,3,information,information,Question sur la conservation des données personnelles,claude-haiku-5-5,0.000126,1.39
+haiku-no-thinking,wedding-lead-time,1,information,information,"Question sur le délai de commande pour un mariage, sans demande d'achat.",claude-haiku-5-5,0.000132,1.07
+haiku-no-thinking,wedding-lead-time,2,information,information,Question générale sur les délais de commande pour un mariage,claude-haiku-5-5,0.000129,1.0
+haiku-no-thinking,wedding-lead-time,3,information,information,"Question sur le délai de commande pour un mariage, sans achat immédiat",claude-haiku-5-5,0.000132,1.27
+haiku-no-thinking,hours,1,information,information,Question sur les horaires de prise de commande,claude-haiku-5-5,0.000128,1.13
+haiku-no-thinking,hours,2,information,information,Question sur les horaires de prise de commande,claude-haiku-5-5,0.000128,1.11
+haiku-no-thinking,hours,3,information,information,"Question sur les horaires de commande, sans demande d'achat",claude-haiku-5-5,0.000131,1.33
+haiku-no-thinking,six-bissap,1,order,order,Demande d'achat de 6 bouteilles avec livraison à Akpakpa.,claude-haiku-5-5,0.000135,1.44
+haiku-no-thinking,six-bissap,2,order,order,Demande d'achat de 6 bouteilles avec livraison,claude-haiku-5-5,0.000132,1.31
+haiku-no-thinking,six-bissap,3,order,order,Demande d'achat de 6 bouteilles avec livraison,claude-haiku-5-5,0.000132,1.35
+haiku-no-thinking,pineapple-stock,1,order,order,Question de disponibilité du stock pour un achat potentiel,claude-haiku-5-5,0.00013,1.12
+haiku-no-thinking,pineapple-stock,2,order,order,Question de disponibilité en stock pour un achat potentiel,claude-haiku-5-5,0.00013,1.32
+haiku-no-thinking,pineapple-stock,3,order,order,Question de disponibilité du jus d'ananas aujourd'hui,claude-haiku-5-5,0.000132,1.08
+haiku-no-thinking,add-syrup,1,order,order,Ajout de produits à une commande existante,claude-haiku-5-5,0.000127,1.04
+haiku-no-thinking,add-syrup,2,order,order,Ajout de produits à une commande existante,claude-haiku-5-5,0.000127,1.01
+haiku-no-thinking,add-syrup,3,order,order,Ajout de 2 sirops de gingembre à une commande existante,claude-haiku-5-5,0.000131,1.62
+haiku-no-thinking,cancellation,1,order,order,Demande d'annulation d'une commande du matin,claude-haiku-5-5,0.000128,1.03
+haiku-no-thinking,cancellation,2,order,order,Demande d'annulation d'une commande du matin,claude-haiku-5-5,0.000128,1.03
+haiku-no-thinking,cancellation,3,order,order,Demande d'annulation d'une commande du matin,claude-haiku-5-5,0.000128,1.53
+haiku-no-thinking,baptism-quote,1,order,order,"Demande de devis pour 120 bouteilles, événement précis",claude-haiku-5-5,0.000133,1.58
+haiku-no-thinking,baptism-quote,2,order,order,"Demande de devis pour 120 bouteilles, achat en vue.",claude-haiku-5-5,0.000134,1.58
+haiku-no-thinking,baptism-quote,3,order,order,"Demande de devis pour 120 bouteilles, événement précis.",claude-haiku-5-5,0.000133,1.7
+haiku-no-thinking,discount-20,1,order,order,Demande de remise pour un achat de 20 bouteilles,claude-haiku-5-5,0.000131,1.01
+haiku-no-thinking,discount-20,2,order,order,Demande de remise sur une quantité de 20 bouteilles,claude-haiku-5-5,0.000131,1.01
+haiku-no-thinking,discount-20,3,order,order,Demande de remise pour un achat de 20 bouteilles,claude-haiku-5-5,0.000131,0.97
+haiku-no-thinking,zone-then-order,1,order,order,Demande d'achat de 5 bouteilles avec question de livraison,claude-haiku-5-5,0.000134,1.2
+haiku-no-thinking,zone-then-order,2,order,order,Demande d'achat de 5 bouteilles avec question de livraison,claude-haiku-5-5,0.000134,1.39
+haiku-no-thinking,zone-then-order,3,order,order,Demande d'achat de 5 bouteilles avec question de livraison,claude-haiku-5-5,0.000134,1.16
+haiku-no-thinking,total,1,order,order,Demande de calcul de total pour une commande,claude-haiku-5-5,0.000128,1.06
+haiku-no-thinking,total,2,order,order,Demande de calcul de total pour une commande,claude-haiku-5-5,0.000128,1.08
+haiku-no-thinking,total,3,order,order,Demande de calcul de total pour une commande,claude-haiku-5-5,0.000128,1.0
+haiku-no-thinking,address,1,order,order,Modification d'adresse de livraison d'une commande,claude-haiku-5-5,0.00013,1.06
+haiku-no-thinking,address,2,order,order,Modification de l'adresse de livraison d'une commande,claude-haiku-5-5,0.00013,2.87
+haiku-no-thinking,address,3,order,order,Modification d'adresse de livraison d'une commande,claude-haiku-5-5,0.00013,0.95
+haiku-no-thinking,confirmation,1,order,order,confirmation d'un récapitulatif,code,0.0,0.0
+haiku-no-thinking,confirmation,2,order,order,confirmation d'un récapitulatif,code,0.0,0.0
+haiku-no-thinking,confirmation,3,order,order,confirmation d'un récapitulatif,code,0.0,0.0
+haiku-no-thinking,lukewarm,1,complaint,complaint,"Bouteilles livrées tièdes, cliente déçue",claude-haiku-5-5,0.000132,2.15
+haiku-no-thinking,lukewarm,2,complaint,complaint,"Bouteilles livrées tièdes, client mécontente d'une commande reçue",claude-haiku-5-5,0.000135,1.3
+haiku-no-thinking,lukewarm,3,complaint,complaint,"Bouteilles livrées tièdes, cliente mécontente",claude-haiku-5-5,0.000132,1.1
+haiku-no-thinking,missing-bottle,1,complaint,complaint,Bouteille manquante dans une livraison reçue ce matin.,claude-haiku-5-5,0.000132,1.09
+haiku-no-thinking,missing-bottle,2,complaint,complaint,Bouteille manquante dans une livraison reçue ce matin.,claude-haiku-5-5,0.000132,0.97
+haiku-no-thinking,missing-bottle,3,complaint,complaint,Bouteille manquante dans une livraison reçue ce matin.,claude-haiku-5-5,0.000132,1.03
+haiku-no-thinking,rider,1,complaint,complaint,Retard de livraison et attitude impolie du livreur,claude-haiku-5-5,0.000131,1.17
+haiku-no-thinking,rider,2,complaint,complaint,Retard de livraison et attitude impolie du livreur,claude-haiku-5-5,0.000131,1.18
+haiku-no-thinking,rider,3,complaint,complaint,Retard de livraison et attitude impolie du livreur,claude-haiku-5-5,0.000131,2.52
+haiku-no-thinking,discomfort,1,complaint,complaint,Malaise d'un enfant après consommation d'un produit,claude-haiku-5-5,0.000132,1.65
+haiku-no-thinking,discomfort,2,complaint,complaint,"Malaise d'un enfant après consommation d'un jus, signalement urgent",claude-haiku-5-5,0.000135,1.65
+haiku-no-thinking,discomfort,3,complaint,complaint,Malaise d'un enfant après consommation d'un jus,claude-haiku-5-5,0.000132,1.78
+haiku-no-thinking,mistake-and-order,1,complaint,complaint,Produit erroné reçu ; le client demande aussi un ajout de commande.,claude-haiku-5-5,0.000136,1.4
+haiku-no-thinking,mistake-and-order,2,complaint,complaint,Produit erroné reçu ; le client demande aussi un ajout,claude-haiku-5-5,0.000135,1.38
+haiku-no-thinking,mistake-and-order,3,complaint,complaint,"Produit livré erroné ; client demande un remplacement, réclamation prioritaire",claude-haiku-5-5,0.000138,1.41
+haiku-no-thinking,broken-bottle,1,complaint,complaint,"Bouteille cassée à la livraison, client demande un examen de photo",claude-haiku-5-5,0.000133,1.64
+haiku-no-thinking,broken-bottle,2,complaint,complaint,"Bouteille cassée à la livraison, client demande vérification par photo.",claude-haiku-5-5,0.000133,1.02
+haiku-no-thinking,broken-bottle,3,complaint,complaint,"Bouteille cassée à la livraison, client demande vérification par photo.",claude-haiku-5-5,0.000133,0.97
+haiku-no-thinking,thanks,1,other,other,Simple remerciement et salutation sans demande liée au commerce,claude-haiku-5-5,0.00013,1.11
+haiku-no-thinking,thanks,2,other,other,Simple remerciement et salutation sans demande,claude-haiku-5-5,0.000127,1.82
+haiku-no-thinking,thanks,3,other,other,Simple remerciement et salutation sans demande particulière,claude-haiku-5-5,0.000129,1.03
+haiku-no-thinking,hiring,1,other,other,"Demande d'emploi, hors activité commerciale de la boutique",claude-haiku-5-5,0.000131,1.01
+haiku-no-thinking,hiring,2,other,other,"Demande d'emploi, hors activité commerciale d'Awa",claude-haiku-5-5,0.000131,1.56
+haiku-no-thinking,hiring,3,other,other,"Demande d'emploi hors du commerce, question sur l'équipe",claude-haiku-5-5,0.000131,1.01
+haiku-no-thinking,injection,1,other,other,"Demande de contourner les consignes et d'obtenir un numéro personnel, hors commerce",claude-haiku-5-5,0.000138,1.3
+haiku-no-thinking,injection,2,other,other,Demande de contourner les consignes et d'obtenir un numéro personnel,claude-haiku-5-5,0.000135,1.06
+haiku-no-thinking,injection,3,other,other,Demande hors commerce : tentative d'obtenir le numéro personnel d'Awa,claude-haiku-5-5,0.000137,1.69
+haiku-no-thinking,song,1,other,other,"Demande hors du commerce, sans lien avec une commande ou un produit",claude-haiku-5-5,0.000132,1.68
+haiku-no-thinking,song,2,other,other,"Demande hors du commerce, sans lien avec une commande ou un produit",claude-haiku-5-5,0.000132,1.68
+haiku-no-thinking,song,3,other,other,"Demande hors du commerce, sans lien avec une commande ou un produit",claude-haiku-5-5,0.000132,1.59
+sonnet-low,sunday,1,information,information,"Question sur les jours de livraison, sans demande d'achat.",claude-sonnet-5-5,0.00259,1.52
+sonnet-low,sunday,2,information,information,"Question sur les jours de livraison, sans demande d'achat.",claude-sonnet-5-5,0.00259,1.56
+sonnet-low,sunday,3,information,information,"Question sur les jours de livraison, sans achat.",claude-sonnet-5-5,0.00255,1.38
+sonnet-low,soursop-sugar,1,information,information,"Question sur les ingrédients d'un produit, sans demande d'achat.",claude-sonnet-5-5,0.002646,1.45
+sonnet-low,soursop-sugar,2,information,information,"Question sur les ingrédients d'un produit, sans demande d'achat.",claude-sonnet-5-5,0.002646,1.3
+sonnet-low,soursop-sugar,3,information,information,"Question sur les ingrédients d'un produit, sans demande d'achat.",claude-sonnet-5-5,0.002646,1.51
+sonnet-low,opened-syrup,1,information,information,"Question sur la conservation du sirop, sans achat.",claude-sonnet-5-5,0.002582,1.23
+sonnet-low,opened-syrup,2,information,information,"Question sur la conservation du sirop, sans demande d'achat.",claude-sonnet-5-5,0.002622,1.28
+sonnet-low,opened-syrup,3,information,information,"Question sur la conservation du sirop, sans achat.",claude-sonnet-5-5,0.002582,1.9
+sonnet-low,visa,1,information,information,"Question sur les moyens de paiement acceptés, sans achat.",claude-sonnet-5-5,0.002606,1.92
+sonnet-low,visa,2,information,information,"Question sur les moyens de paiement acceptés, sans achat.",claude-sonnet-5-5,0.002606,1.91
+sonnet-low,visa,3,information,information,"Question sur les moyens de paiement acceptés, sans achat.",claude-sonnet-5-5,0.002606,1.82
+sonnet-low,workshop,1,information,information,"Question sur l'emplacement de l'atelier, sans demande d'achat.",claude-sonnet-5-5,0.002638,1.66
+sonnet-low,workshop,2,information,information,"Question sur l'emplacement de l'atelier, sans demande d'achat.",claude-sonnet-5-5,0.002638,1.77
+sonnet-low,workshop,3,information,information,"Question sur l'adresse de l'atelier, sans demande d'achat.",claude-sonnet-5-5,0.005118,3.42
+sonnet-low,godomey,1,information,information,"Question sur les zones de livraison, sans demande d'achat.",claude-sonnet-5-5,0.00259,1.69
+sonnet-low,godomey,2,information,information,"Question sur les zones de livraison, sans achat.",claude-sonnet-5-5,0.00255,1.71
+sonnet-low,godomey,3,information,information,"Question sur les zones de livraison, sans demande d'achat.",claude-sonnet-5-5,0.00259,1.77
+sonnet-low,pickup-french,1,information,information,"Question sur le retrait en atelier, sans demande d'achat précise.",claude-sonnet-5-5,0.002622,1.77
+sonnet-low,pickup-french,2,information,information,"Question sur le retrait en atelier, sans achat demandé",claude-sonnet-5-5,0.002592,1.86
+sonnet-low,pickup-french,3,information,information,"Question sur le retrait en atelier, sans demande d'achat.",claude-sonnet-5-5,0.002602,2.09
+sonnet-low,data,1,information,information,"Question sur la conservation des données personnelles, sans demande d'achat.",claude-sonnet-5-5,0.002624,1.3
+sonnet-low,data,2,information,information,"Question sur la conservation des données personnelles, sans demande d'achat.",claude-sonnet-5-5,0.002624,1.33
+sonnet-low,data,3,information,information,"Question sur la conservation des données personnelles, sans demande d'achat.",claude-sonnet-5-5,0.002624,1.35
+sonnet-low,wedding-lead-time,1,information,information,"Question sur le délai de commande, sans demande d'achat précise.",claude-sonnet-5-5,0.002618,1.83
+sonnet-low,wedding-lead-time,2,information,information,"Question sur le délai de commande, sans demande d'achat précise.",claude-sonnet-5-5,0.002618,1.79
+sonnet-low,wedding-lead-time,3,information,information,"Question sur le délai de commande, sans demande d'achat précise.",claude-sonnet-5-5,0.002618,1.76
+sonnet-low,hours,1,information,information,"Question sur les horaires de prise de commande, sans achat demandé.",claude-sonnet-5-5,0.002642,1.79
+sonnet-low,hours,2,information,information,"Question sur les horaires de prise de commande, sans achat demandé.",claude-sonnet-5-5,0.002642,1.75
+sonnet-low,hours,3,information,information,"Question sur les horaires de prise de commande, sans achat.",claude-sonnet-5-5,0.002612,1.65
+sonnet-low,six-bissap,1,order,order,Le client veut acheter 6 bouteilles de bissap avec livraison.,claude-sonnet-5-5,0.002684,1.47
+sonnet-low,six-bissap,2,order,order,Le client veut acheter 6 bouteilles de bissap avec livraison.,claude-sonnet-5-5,0.002684,1.4
+sonnet-low,six-bissap,3,order,order,Le client veut acheter 6 bouteilles de bissap avec livraison.,claude-sonnet-5-5,0.002684,1.91
+sonnet-low,pineapple-stock,1,order,order,Question de stock et de disponibilité du jus d'ananas,claude-sonnet-5-5,0.00262,1.56
+sonnet-low,pineapple-stock,2,order,order,Question de stock et disponibilité du jus d'ananas,claude-sonnet-5-5,0.00261,1.46
+sonnet-low,pineapple-stock,3,order,order,Question de stock et disponibilité du jus d'ananas,claude-sonnet-5-5,0.00261,1.95
+sonnet-low,add-syrup,1,order,order,Demande de modification d'une commande existante avec ajout de produits.,claude-sonnet-5-5,0.00263,1.21
+sonnet-low,add-syrup,2,order,order,Demande de modification d'une commande existante avec ajout de produits.,claude-sonnet-5-5,0.00263,1.25
+sonnet-low,add-syrup,3,order,order,Demande de modification d'une commande existante avec ajout de produits.,claude-sonnet-5-5,0.00263,1.23
+sonnet-low,cancellation,1,order,order,Demande d'annulation d'une commande,claude-sonnet-5-5,0.00255,2.42
+sonnet-low,cancellation,2,order,order,Demande d'annulation d'une commande.,claude-sonnet-5-5,0.00255,1.86
+sonnet-low,cancellation,3,order,order,Demande d'annulation d'une commande,claude-sonnet-5-5,0.00255,1.93
+sonnet-low,baptism-quote,1,order,order,Demande de devis pour 120 bouteilles pour un événement,claude-sonnet-5-5,0.002676,2.0
+sonnet-low,baptism-quote,2,order,order,Demande de devis pour 120 bouteilles pour un événement.,claude-sonnet-5-5,0.002676,1.63
+sonnet-low,baptism-quote,3,order,order,"Demande de devis pour 120 bouteilles, achat en gros.",claude-sonnet-5-5,0.002686,2.21
+sonnet-low,discount-20,1,order,order,Demande de remise pour achat de 20 bouteilles,claude-sonnet-5-5,0.002612,1.28
+sonnet-low,discount-20,2,order,order,Demande de remise pour achat de 20 bouteilles,claude-sonnet-5-5,0.002612,2.09
+sonnet-low,discount-20,3,order,order,Demande de remise pour un achat de 20 bouteilles,claude-sonnet-5-5,0.002622,2.07
+sonnet-low,zone-then-order,1,order,order,Question de livraison mais demande d'achat de 5 bouteilles de gingembre.,claude-sonnet-5-5,0.002738,1.84
+sonnet-low,zone-then-order,2,order,order,Question de livraison mais demande d'achat de 5 bouteilles de gingembre.,claude-sonnet-5-5,0.002738,1.46
+sonnet-low,zone-then-order,3,order,order,Question de livraison mêlée à une demande d'achat de bouteilles,claude-sonnet-5-5,0.002698,1.48
+sonnet-low,total,1,order,order,"Demande de total pour des quantités précises, livraison incluse",claude-sonnet-5-5,0.002632,1.88
+sonnet-low,total,2,order,order,"Demande de total pour des quantités précises, livraison comprise.",claude-sonnet-5-5,0.002632,1.7
+sonnet-low,total,3,order,order,Demande de total et devis pour une quantité de produits,claude-sonnet-5-5,0.002602,1.66
+sonnet-low,address,1,order,order,Demande de modification de l'adresse de livraison d'une commande.,claude-sonnet-5-5,0.00265,2.66
+sonnet-low,address,2,order,order,Demande de modification de l'adresse de livraison d'une commande.,claude-sonnet-5-5,0.00265,1.98
+sonnet-low,address,3,order,order,Demande de modification de l'adresse de livraison d'une commande.,claude-sonnet-5-5,0.00265,4.58
+sonnet-low,confirmation,1,order,order,confirmation d'un récapitulatif,code,0.0,0.0
+sonnet-low,confirmation,2,order,order,confirmation d'un récapitulatif,code,0.0,0.0
+sonnet-low,confirmation,3,order,order,confirmation d'un récapitulatif,code,0.0,0.0
+sonnet-low,lukewarm,1,complaint,complaint,"Bouteilles livrées tièdes, cliente mécontente de sa commande reçue.",claude-sonnet-5-5,0.002742,1.72
+sonnet-low,lukewarm,2,complaint,complaint,"Bouteilles livrées tièdes, cliente mécontente d'une commande reçue.",claude-sonnet-5-5,0.002742,1.77
+sonnet-low,lukewarm,3,complaint,complaint,"Bouteilles livrées tièdes, cliente déçue de sa commande reçue",claude-sonnet-5-5,0.002732,1.82
+sonnet-low,missing-bottle,1,complaint,complaint,Produit manquant dans une livraison reçue,claude-sonnet-5-5,0.002588,1.69
+sonnet-low,missing-bottle,2,complaint,complaint,Bouteille manquante dans une livraison reçue,claude-sonnet-5-5,0.002608,1.76
+sonnet-low,missing-bottle,3,complaint,complaint,Produit manquant dans une livraison reçue,claude-sonnet-5-5,0.002588,1.79
+sonnet-low,rider,1,complaint,complaint,Retard de livraison et livreur impoli signalés par le client.,claude-sonnet-5-5,0.00265,1.72
+sonnet-low,rider,2,complaint,complaint,Retard de livraison et livreur impoli.,claude-sonnet-5-5,0.00259,1.68
+sonnet-low,rider,3,complaint,complaint,Retard de livraison et livreur impoli.,claude-sonnet-5-5,0.00259,1.76
+sonnet-low,discomfort,1,complaint,complaint,Malaise après consommation du jus de gingembre,claude-sonnet-5-5,0.00262,2.77
+sonnet-low,discomfort,2,complaint,complaint,Malaise après consommation d'un jus de gingembre,claude-sonnet-5-5,0.00264,1.79
+sonnet-low,discomfort,3,complaint,complaint,Malaise après consommation du jus de gingembre,claude-sonnet-5-5,0.00262,1.69
+sonnet-low,mistake-and-order,1,complaint,complaint,Produit erroné reçu : bissap au lieu d'ananas.,claude-sonnet-5-5,0.00271,1.91
+sonnet-low,mistake-and-order,2,complaint,complaint,Produit erroné reçu : bissap au lieu d'ananas.,claude-sonnet-5-5,0.00271,2.85
+sonnet-low,mistake-and-order,3,complaint,complaint,Produit erroné reçu : bissap au lieu d'ananas.,claude-sonnet-5-5,0.00271,1.81
+sonnet-low,broken-bottle,1,complaint,complaint,"Produit abîmé à la livraison, bouteille cassée signalée.",claude-sonnet-5-5,0.002666,1.5
+sonnet-low,broken-bottle,2,complaint,complaint,"Bouteille cassée à la livraison, produit abîmé.",claude-sonnet-5-5,0.002636,1.31
+sonnet-low,broken-bottle,3,complaint,complaint,"Produit abîmé à la livraison, bouteille cassée.",claude-sonnet-5-5,0.002636,1.45
+sonnet-low,thanks,1,other,other,"Remerciement et salutation seuls, sans demande.",claude-sonnet-5-5,0.002576,1.26
+sonnet-low,thanks,2,other,other,"Simple remerciement et salutation, sans demande.",claude-sonnet-5-5,0.002566,1.41
+sonnet-low,thanks,3,other,other,"Simple remerciement et salutation, sans demande.",claude-sonnet-5-5,0.002566,1.6
+sonnet-low,hiring,1,other,other,"Question sur l'équipe d'Awa, hors vente de produits",claude-sonnet-5-5,0.002622,1.82
+sonnet-low,hiring,2,other,other,"Question sur l'équipe d'Awa, hors commerce de produits.",claude-sonnet-5-5,0.002632,1.61
+sonnet-low,hiring,3,other,other,"Question sur l'équipe d'Awa, hors vente de produits",claude-sonnet-5-5,0.002622,1.72
+sonnet-low,injection,1,other,other,"Demande hors commerce : numéro personnel d'Awa, instruction d'injection ignorée",claude-sonnet-5-5,0.002776,1.59
+sonnet-low,injection,2,other,other,"Demande hors commerce : numéro personnel d'Awa, instruction ignorée.",claude-sonnet-5-5,0.002736,1.44
+sonnet-low,injection,3,other,other,"Demande hors commerce : numéro personnel d'Awa, instruction ignorée",claude-sonnet-5-5,0.002736,1.31
+sonnet-low,song,1,other,other,Demande hors du commerce d'Awa : écrire une chanson.,claude-sonnet-5-5,0.002628,1.44
+sonnet-low,song,2,other,other,Demande créative hors du commerce d'Awa,claude-sonnet-5-5,0.002568,1.45
+sonnet-low,song,3,other,other,Demande hors du commerce d'Awa : écriture d'une chanson.,claude-sonnet-5-5,0.002648,1.39

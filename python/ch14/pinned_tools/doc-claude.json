@@ -1,0 +1,132 @@
+[
+  {
+    "input_schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Search query (keywords or phrase)"
+        },
+        "limit": {
+          "description": "Maximum results to return (default: 10, max: 50)",
+          "type": "number"
+        },
+        "sdk_language": {
+          "description": "Search this SDK's API reference together with the guides. Accepts an SDK language such as \"python\" or \"typescript\", or \"http\" (default — the language-neutral REST reference); unrecognized values fall back to \"http\". Results for endpoints then link to that SDK's reference pages and match its method names.",
+          "type": "string"
+        },
+        "kind": {
+          "description": "Only return results of one kind: \"prose_page\" (guide pages), \"api_sdk_method\" (one API method, such as \"Create a Message\"), or \"api_sdk_resource\" (a group of endpoints, such as Messages).",
+          "type": "string",
+          "enum": [
+            "prose_page",
+            "api_sdk_method",
+            "api_sdk_resource"
+          ]
+        }
+      },
+      "required": [
+        "query"
+      ]
+    },
+    "name": "search_docs",
+    "description": "Search Claude documentation (the guides and the API reference together) by keyword or phrase. Returns matching pages and API endpoints ranked by relevance, with snippets showing context around matches."
+  },
+  {
+    "input_schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "properties": {
+        "tab": {
+          "description": "Filter to specific tab (e.g., developer-guide, api-reference)",
+          "type": "string"
+        },
+        "format": {
+          "description": "Output format (default: markdown)",
+          "type": "string",
+          "enum": [
+            "json",
+            "markdown"
+          ]
+        }
+      }
+    },
+    "name": "get_navigation",
+    "description": "Get the documentation navigation structure. Returns tabs, groups, and pages organized hierarchically. Useful for browsing available documentation topics."
+  },
+  {
+    "input_schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "description": "Documentation path (e.g., /docs/en/intro or intro) or a result URL from search_docs (e.g., https://platform.claude.com/docs/en/intro). For fuzzy lookup, use search_docs."
+        },
+        "sdk_languages": {
+          "description": "Only include code examples in these languages. Without it, pages include the examples in every language and are much longer.",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "typescript",
+              "javascript",
+              "boto3",
+              "python",
+              "java",
+              "kotlin",
+              "swift",
+              "ruby",
+              "go",
+              "cli",
+              "bash",
+              "curl",
+              "php",
+              "csharp",
+              "http",
+              "node",
+              "terraform",
+              "shell",
+              "c#"
+            ]
+          }
+        }
+      },
+      "required": [
+        "path"
+      ]
+    },
+    "name": "get_doc",
+    "description": "Get the full content of a documentation page. Returns the page title, description, URL, and cleaned markdown content."
+  },
+  {
+    "input_schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "properties": {
+        "method": {
+          "type": "string",
+          "enum": [
+            "GET",
+            "POST",
+            "PUT",
+            "PATCH",
+            "DELETE"
+          ],
+          "description": "HTTP method"
+        },
+        "path": {
+          "type": "string",
+          "description": "API path (e.g., /v1/messages)"
+        }
+      },
+      "required": [
+        "method",
+        "path"
+      ]
+    },
+    "name": "get_api_endpoint",
+    "description": "Get detailed information about a specific API endpoint including parameters, request body, and responses."
+  }
+]

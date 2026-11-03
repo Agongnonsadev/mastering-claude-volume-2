@@ -1,0 +1,33 @@
+# Chapter 20: on each push and each pull request, the Comptoir's tests and the code audit of
+# chapter 18. Free: no test calls the API, and this job has no access to Claude.
+name: The Comptoir's tests
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tests-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: python
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+      - name: Install
+        run: pip install -e ".[tests,agents,mcp]"   # with the extras, so that the tests of chapters 13 to 16 run
+      - name: Tests (no call to the API)
+        run: python -m pytest -q
+      - name: Code audit (chapter 18, fake client)
+        run: python -m ch18.code_audit

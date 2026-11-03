@@ -1,0 +1,78 @@
+{
+  "order-01.jpg": {
+    "customer": "Mrs. Akpovi",
+    "neighborhood": "Fidjrossè",
+    "total_read": 11000,
+    "lines": [
+      {
+        "product": "Bissap juice",
+        "quantity": 6,
+        "unit_price_read": 1000
+      },
+      {
+        "product": "Ginger syrup",
+        "quantity": 2,
+        "unit_price_read": 2500
+      }
+    ]
+  },
+  "order-02.jpg": {
+    "customer": "Mr. Houngbo",
+    "neighborhood": "Akpakpa",
+    "total_read": 3600,
+    "lines": [
+      {
+        "product": "Pineapple juice",
+        "quantity": 4,
+        "unit_price_read": 900
+      }
+    ]
+  },
+  "order-03.jpg": {
+    "customer": "Mrs. Dossou",
+    "neighborhood": "Cadjèhoun",
+    "total_read": null,
+    "lines": [
+      {
+        "product": "Soursop juice",
+        "quantity": null,
+        "unit_price_read": 1000
+      },
+      {
+        "product": "Ginger juice",
+        "quantity": 3,
+        "unit_price_read": 1000
+      }
+    ]
+  },
+  "order-04.jpg": {
+    "customer": "Mr. Agossou",
+    "neighborhood": "Gbégamey",
+    "total_read": 5000,
+    "lines": [
+      {
+        "product": "Bissap juice",
+        "quantity": 5,
+        "unit_price_read": 1000
+      }
+    ]
+  },
+  "invoice-01.pdf": {
+    "supplier": "Emballages Sonagnon",
+    "number": "F-2026-0412",
+    "total_read": 32000,
+    "currency": "FCFA",
+    "lines": [
+      {
+        "quantity": 200,
+        "unit_price": 150,
+        "amount": 30000
+      },
+      {
+        "quantity": 200,
+        "unit_price": 10,
+        "amount": 2000
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+# Chapter 19: Caddy terminates HTTPS, bounds the size of the requests, and passes them on to the Comptoir.
+{$COMPTOIR_DOMAIN} {
+	# The chat needs no more than 16 KB per message (chapter 18); Meta sends WhatsApp notifications
+	# of up to 3 MB. A bigger body is refused (413) before reaching the Comptoir.
+	@whatsapp path /whatsapp
+	@others not path /whatsapp
+	request_body @whatsapp {
+		max_size 4MB
+	}
+	request_body @others {
+		max_size 16KB
+	}
+	reverse_proxy comptoir:8019
+	log {
+		output stdout
+	}
+}

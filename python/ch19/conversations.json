@@ -1,0 +1,18 @@
+[
+ {"id": "delivery-question", "messages": ["Hello, do you deliver to Fidjrossè?"]},
+ {"id": "confirmed-order", "messages": [
+  "Good evening, I'd like 6 bissap juices",
+  "In the name of Mariam, Gbégamey neighborhood",
+  "YES {code}"]},
+ {"id": "question-then-order", "messages": [
+  "Do you have soursop juice at the moment?",
+  "Then put me down for 3 pineapple juices and 2 ginger juices, for Koffi in Akpakpa",
+  "YES {code}"]},
+ {"id": "complaint", "messages": ["The juices delivered yesterday were lukewarm, it's the second time this month"]},
+ {"id": "wedding-quote", "messages": [
+  "For a wedding on November 14, I'd need 80 bottles, is that possible?",
+  "The party is in Cadjèhoun: 50 bissap and 30 pineapple"]},
+ {"id": "discount", "messages": ["Do you give a price if I take 10 bottles every week?"]},
+ {"id": "out-of-zone", "messages": ["Do you deliver to Godomey?", "And if I come and pick it up at the workshop?"]},
+ {"id": "thanks", "messages": ["Thank you very much, see you soon!"]}
+]

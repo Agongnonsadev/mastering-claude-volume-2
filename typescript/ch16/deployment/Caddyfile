@@ -1,0 +1,10 @@
+# Chapter 16: Caddy terminates HTTPS and passes everything on to the Comptoir.
+{$COMPTOIR_DOMAIN} {
+	reverse_proxy comptoir:8016 {
+		# The progress notifications arrive as a stream (SSE): keep nothing in a buffer.
+		flush_interval -1
+	}
+	log {
+		output stdout
+	}
+}

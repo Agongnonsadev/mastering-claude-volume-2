@@ -1,0 +1,7 @@
+# Chapter 19: the direct dependencies of the image of the Comptoir online, at pinned versions.
+# The complete list, with the hashes: uv pip compile requirements.in --generate-hashes \
+#   --python-version 3.13 --python-platform x86_64-manylinux_2_28 -o requirements.txt
+anthropic==2.1.0     # API 2026-10-21 (chapter 21)
+fastapi==0.150.0
+uvicorn==0.54.0
+httpx2==2.15.1   # the version of the local tests (the SDK also accepts 2.16)

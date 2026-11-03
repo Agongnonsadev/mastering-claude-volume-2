@@ -1,0 +1,5 @@
+# Chapter 20: the state of the end-of-turn hook and the tool log, specific to each workstation.
+# The personal settings too.
+.last-green
+tool-log.jsonl
+settings.local.json

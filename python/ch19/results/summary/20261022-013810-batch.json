@@ -1,0 +1,49 @@
+{
+ "mode": "batch",
+ "batch": "msgbatch_016E1PMuFpeEz8PAPsygZphN",
+ "text": "Bonsoir Awa, aujourd'hui 6 commandes pour un total de 36 500 FCFA : 16 jus de bissap, 8 jus d'ananas, 4 jus de gingembre, 2 sirops de gingembre et 1 sirop de bissap.\nDeux demandes attendent votre décision : un devis pour un mariage à Cadjèhoun le 14 novembre (80 bouteilles, dont 50 de bissap et 30 d'ananas), et un client régulier qui demande un tarif pour 10 bouteilles par semaine.\nÀ surveiller : le jus de corossol est en rupture, le jus d'ananas ne reste qu'à 4 unités et le sirop de gingembre à 3.",
+ "cut": false,
+ "cost_dollars": 9.3e-05,
+ "tokens": {
+  "input": 623,
+  "output": 247
+ },
+ "duration_s": 84.9,
+ "facts": {
+  "day": "2026-10-20",
+  "orders": 6,
+  "total_fcfa": 36500,
+  "products_sold": {
+   "Bissap juice": 16,
+   "Pineapple juice": 8,
+   "Ginger juice": 4,
+   "Ginger syrup": 2,
+   "Bissap syrup": 1
+  },
+  "neighborhoods": {
+   "Fidjrossè": 1,
+   "Gbégamey": 1,
+   "Akpakpa": 1,
+   "Vèdoko": 1,
+   "Agla": 1,
+   "Cadjèhoun": 1
+  },
+  "requests_for_awa": [
+   {
+    "reason": "quote",
+    "summary": "Wedding on November 14 in Cadjèhoun: 80 bottles (50 bissap, 30 pineapple)."
+   },
+   {
+    "reason": "discount",
+    "summary": "Regular customer: asks for a price for 10 bottles every week."
+   }
+  ],
+  "out_of_stock": [
+   "Soursop juice"
+  ],
+  "low_stock": {
+   "Ginger syrup": 3,
+   "Pineapple juice": 4
+  }
+ }
+}

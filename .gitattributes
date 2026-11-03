@@ -1,0 +1,8 @@
+# Line endings of the companion repository, whatever the workstation's core.autocrlf setting.
+# A PDF can contain only text: Git must never change its line endings, otherwise
+# its address tables no longer match (test of chapter 7).
+*.pdf binary
+*.mcpb binary
+*.sqlite3 binary
+# Shell scripts run under sh (Linux, macOS, Git Bash), and in the Docker images: always LF.
+*.sh text eol=lf

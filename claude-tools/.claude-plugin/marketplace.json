@@ -1,0 +1,19 @@
+{
+  "name": "yao-tools",
+  "description": "Yao's guardrails for Claude Code, taken out of Awa's Comptoir for his other repositories (chapter 20 of Mastering Claude, Volume 2). A fictional example.",
+  "owner": {
+    "name": "Botlyx Academy"
+  },
+  "plugins": [
+    {
+      "name": "secret-guard",
+      "source": "./plugins/secret-guard",
+      "description": "Blocks a commit that contains an API key, a token, a private key or a .env file."
+    },
+    {
+      "name": "peer-review",
+      "source": "./plugins/peer-review",
+      "description": "A reviewer subagent and the /peer-review:review command, which review a diff against the project's rules."
+    }
+  ]
+}

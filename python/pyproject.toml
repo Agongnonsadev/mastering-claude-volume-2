@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "comptoir"
+version = "0.8.0"
+description = "Awa's Comptoir: companion code of Volume 2 of “Mastering Claude” (Botlyx Academy)"
+requires-python = ">=3.10"
+dependencies = [
+    "anthropic>=2.1,<3",     # API 2026-10-21 (chapter 21); 1.x sent 2023-06-01
+    "fastapi>=0.150,<1",     # the Comptoir on the web (chapter 6)
+    "uvicorn>=0.54,<1",
+    "pillow>=11",            # shrink photos, make the samples (chapter 7)
+    "httpx2>=2.15,<3",       # Meta's API for WhatsApp (chapter 19); until then it came through the SDK
+]
+
+[project.optional-dependencies]
+tests = ["pytest>=8", "httpx>=0.28"]  # httpx: FastAPI's test client
+agents = ["claude-agent-sdk>=0.2.168,<0.3"]  # the same agent with the Claude Agent SDK (chapter 13)
+mcp = ["anthropic[mcp]>=2.1,<3"]  # MCP client and conversion of the tools for the Tool Runner (chapter 14)
+
+[tool.setuptools]
+packages = ["comptoir"]
+
+[tool.setuptools.package-data]
+comptoir = ["data/*.json", "data/workshop/*", "prompts/*.md", "pages/*.html", "knowledge/*.md"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

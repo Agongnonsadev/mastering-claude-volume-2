@@ -1,0 +1,25 @@
+{
+  "_note": "Fictional data: Délices d'Awa and its suppliers are imaginary, created for “Mastering Claude”, Volume 2.",
+  "events": [
+    {
+      "event": "Christening",
+      "date": "2026-11-15",
+      "status": "confirmed: 50% deposit paid on October 16",
+      "bottles": {
+        "Bissap juice": 60,
+        "Pineapple juice": 40,
+        "Ginger juice": 20
+      },
+      "production": "the day before, November 14"
+    },
+    {
+      "event": "Wedding",
+      "date": "2026-12-05",
+      "status": "quote sent on October 15; deposit not paid",
+      "bottles": {
+        "Pineapple juice": 200
+      },
+      "production": "to plan if the deposit is paid"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "_note": "Fictional data: Délices d'Awa and its suppliers are imaginary, created for “Mastering Claude”, Volume 2.",
+  "recipes": {
+    "Bissap juice": {
+      "Dried hibiscus flowers": 0.02,
+      "Cane sugar": 0.03,
+      "Glass bottle 500 ml": 1,
+      "Cap": 1,
+      "Label": 1
+    },
+    "Ginger juice": {
+      "Fresh ginger": 0.08,
+      "Lime": 0.01,
+      "Cane sugar": 0.028,
+      "Glass bottle 500 ml": 1,
+      "Cap": 1,
+      "Label": 1
+    },
+    "Pineapple juice": {
+      "Sugarloaf pineapple": 0.5,
+      "Glass bottle 500 ml": 1,
+      "Cap": 1,
+      "Label": 1
+    },
+    "Soursop juice": {
+      "Soursop pulp": 0.25,
+      "Cane sugar": 0.025,
+      "Glass bottle 500 ml": 1,
+      "Cap": 1,
+      "Label": 1
+    },
+    "Bissap syrup": {
+      "Dried hibiscus flowers": 0.08,
+      "Cane sugar": 0.3,
+      "Lime": 0.01,
+      "Glass flask 500 ml": 1,
+      "Cap": 1,
+      "Label": 1
+    },
+    "Ginger syrup": {
+      "Fresh ginger": 0.2,
+      "Cane sugar": 0.3,
+      "Lime": 0.015,
+      "Glass flask 500 ml": 1,
+      "Cap": 1,
+      "Label": 1
+    }
+  },
+  "units": {
+    "Dried hibiscus flowers": "kg",
+    "Fresh ginger": "kg",
+    "Sugarloaf pineapple": "piece",
+    "Soursop pulp": "kg",
+    "Cane sugar": "kg",
+    "Lime": "kg",
+    "Glass bottle 500 ml": "unit",
+    "Glass flask 500 ml": "unit",
+    "Cap": "unit",
+    "Label": "unit"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "orders": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "ch14/mcp/node_modules/@bytebase/dbhub/dist/index.js",
+        "--transport",
+        "stdio",
+        "--config",
+        "ch14/dbhub.toml"
+      ],
+      "env": {}
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "secret-guard",
+  "description": "Blocks a commit that contains an API key, a token, a private key or a .env file (PreToolUse hook on git commit).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Botlyx Academy"
+  }
+}

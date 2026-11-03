@@ -1,0 +1,19 @@
+{
+  "_note": "Fictional business and figures (Délices d'Awa, Volume 1 of “Mastering Claude”). Single source of the prices: the prompt and the code read them here.",
+  "products": [
+    {"name": "Bissap juice", "format": "500 ml bottle", "price_fcfa": 1000},
+    {"name": "Ginger juice", "format": "500 ml bottle", "price_fcfa": 1000},
+    {"name": "Pineapple juice", "format": "500 ml bottle", "price_fcfa": 1000},
+    {"name": "Soursop juice", "format": "500 ml bottle", "price_fcfa": 1000},
+    {"name": "Bissap syrup", "format": "bottle", "price_fcfa": 2500},
+    {"name": "Ginger syrup", "format": "bottle", "price_fcfa": 2500}
+  ],
+  "terms": [
+    "Orders through WhatsApp, from 8 a.m. to 7 p.m.",
+    "Delivery in Cotonou only: the same day for any order placed before 12 p.m., otherwise the next day.",
+    "Free delivery from 5 bottles; 500 FCFA below that.",
+    "Payment: Mobile Money (MTN MoMo, Moov Money) or cash on delivery.",
+    "Events (weddings, baptisms, birthdays): from 30 bottles, on quote, to be ordered at least 7 days in advance, 50% deposit.",
+    "Beyond 50 bottles, price on quote: Awa answers within 24 hours."
+  ]
+}

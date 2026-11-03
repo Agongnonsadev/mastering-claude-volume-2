@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Awa's Comptoir</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 40rem; margin: 0 auto; padding: 1rem;
+         background: #fdf8f3; color: #2b2118; }
+  h1 { font-size: 1.3rem; }
+  #thread { display: flex; flex-direction: column; gap: .5rem; min-height: 50vh; }
+  .bubble { padding: .6rem .8rem; border-radius: .8rem; max-width: 85%; white-space: pre-wrap; }
+  .customer { align-self: flex-end; background: #ffd9b8; }
+  .comptoir { align-self: flex-start; background: #fff; border: 1px solid #ead9c8; }
+  #status { min-height: 1.5rem; font-size: .9rem; color: #7a6656; }
+  #notice { font-size: .85rem; color: #7a6656; margin-top: -.5rem; }
+  form { display: flex; gap: .5rem; position: sticky; bottom: 0; background: #fdf8f3; padding: .5rem 0; }
+  input { flex: 1; min-width: 0; padding: .6rem; font-size: 1rem; }
+  button { padding: .6rem 1rem; font-size: 1rem; }
+</style>
+</head>
+<body>
+<h1>Awa's Comptoir</h1>
+<!-- Chapter 18: Anthropic's usage policy requires that an assistant that talks to customers
+     say it is an AI, at least at the start of each exchange or in the interface. -->
+<p id="notice">You are chatting with the Comptoir, the automated assistant of Délices d'Awa: an artificial
+intelligence, not a person. To talk to Awa, just ask. Your messages are kept for 30 days, then
+deleted; to have them deleted sooner, ask Awa.</p>
+<div id="thread" aria-live="polite"></div>
+<p id="status"></p>
+<form id="form">
+  <input id="question" maxlength="2000" autocomplete="off" placeholder="Your question…" required>
+  <button id="send">Send</button>
+</form>
+<script>
+let conversation = null;
+const thread = document.getElementById("thread");
+const status = document.getElementById("status");
+const button = document.getElementById("send");
+const field = document.getElementById("question");
+
+function bubble(cls, text) {
+  const div = document.createElement("div");
+  div.className = "bubble " + cls;
+  div.textContent = text;  // never innerHTML: Claude's text is not code of the page
+  thread.append(div);
+  div.scrollIntoView({ block: "end" });
+  return div;
+}
+
+// Flags a slow connection: nothing received for 20 seconds, not even a sign of life.
+let timer = null;
+function watch() {
+  clearTimeout(timer);
+  timer = setTimeout(() => { status.textContent = "Slow connection… the answer is coming."; }, 20000);
+}
+
+// Reads an SSE stream received in response to a POST (EventSource can only send GETs).
+async function* events(response) {
+  const reader = response.body.pipeThrough(new TextDecoderStream()).getReader();
+  let buffer = "";
+  while (true) {
+    const { value, done } = await reader.read();
+    if (done) return;
+    buffer += value;
+    let end;
+    while ((end = buffer.indexOf("\n\n")) >= 0) {
+      const block = buffer.slice(0, end);
+      buffer = buffer.slice(end + 2);
+      let name = null, data = "";
+      for (const line of block.split("\n")) {
+        if (line.startsWith("event: ")) name = line.slice(7);
+        else if (line.startsWith("data: ")) data += line.slice(6);
+      }
+      yield { name, data: data ? JSON.parse(data) : null };  // name null: sign of life
+    }
+  }
+}
+
+// Sends a message and shows the answer as it comes. In case of a cut, sends again
+// the same message ID with the number of chunks already received: the server
+// picks up there, without calling Claude again and without showing anything twice.
+async function follow(messageId, text, zone, received = 0) {
+  for (let attempt = 0; attempt < 6; attempt++) {
+    if (attempt > 0) {
+      status.textContent = "Connection lost, trying again…";
+      await new Promise(r => setTimeout(r, Math.min(1000 * 2 ** (attempt - 1), 8000)));
+    }
+    try {
+      watch();
+      const r = await fetch("/api/messages", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ conversation, message_id: messageId, text, since: received }),
+      });
+      if (r.status === 409) { status.textContent = "An answer is already in progress."; return; }
+      if (r.status === 429) { status.textContent = "Many messages in a short time: try again in a minute."; return; }
+      if (r.status === 413) { status.textContent = "Message too long."; return; }
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      status.textContent = received ? "Resuming…" : "The Comptoir is writing…";
+      for await (const { name, data } of events(r)) {
+        watch();
+        if (name === "conversation") {
+          if (data.renewed) bubble("comptoir", "(New conversation: the previous one was closed.)");
+          conversation = data.conversation;
+        } else if (name === "text") {
+          zone.textContent += data.text;
+          received++;
+          status.textContent = "The Comptoir is writing…";
+        } else if (name === "end") {
+          status.textContent = data.truncated ? "(Answer cut short.)" : "";
+          return;
+        } else if (name === "error") {
+          status.textContent = data.message;
+          return;
+        } else if (name === "refusal") {
+          zone.textContent = data.message;  // the beginning already displayed is to be thrown away
+          status.textContent = "";
+          return;
+        }
+      }
+      // Stream closed without “end”: the connection gave way along the way. We resume.
+    } catch (e) {
+      // No network, or connection cut: we resume too.
+    } finally {
+      clearTimeout(timer);
+    }
+  }
+  status.textContent = "The connection is not coming back. ";
+  const resume = document.createElement("button");
+  resume.textContent = "Resume";
+  resume.onclick = async () => { resume.remove(); await follow(messageId, text, zone, received); };
+  status.append(resume);
+}
+
+document.getElementById("form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const text = field.value.trim();
+  if (!text) return;
+  field.value = "";
+  bubble("customer", text);
+  const zone = bubble("comptoir", "");
+  button.disabled = true;  // one message at a time: the server refuses it too
+  status.textContent = "The Comptoir is writing…";  // right away, even before the first chunk
+  try { await follow(crypto.randomUUID(), text, zone); } finally { button.disabled = false; }
+});
+</script>
+</body>
+</html>

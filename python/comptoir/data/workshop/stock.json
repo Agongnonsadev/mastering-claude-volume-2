@@ -1,0 +1,24 @@
+{
+  "_note": "Fictional data: Délices d'Awa and its suppliers are imaginary, created for “Mastering Claude”, Volume 2.",
+  "date": "2026-10-19 07:00",
+  "finished_products": {
+    "Bissap juice": 40,
+    "Ginger juice": 25,
+    "Pineapple juice": 12,
+    "Soursop juice": 0,
+    "Bissap syrup": 8,
+    "Ginger syrup": 5
+  },
+  "items": {
+    "Dried hibiscus flowers": 2.0,
+    "Fresh ginger": 3.0,
+    "Sugarloaf pineapple": 6,
+    "Soursop pulp": 0.0,
+    "Cane sugar": 20.0,
+    "Lime": 1.0,
+    "Glass bottle 500 ml": 30,
+    "Glass flask 500 ml": 20,
+    "Cap": 150,
+    "Label": 300
+  }
+}

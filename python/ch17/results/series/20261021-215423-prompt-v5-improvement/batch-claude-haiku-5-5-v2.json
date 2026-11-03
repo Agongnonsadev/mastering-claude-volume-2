@@ -1,0 +1,10 @@
+{
+  "batch": "msgbatch_01SCophbTqE5yZqCWweARW51",
+  "duration_s": "between 403 and 434 (status read every 30 s)",
+  "compared_judgments": 120,
+  "same_outcome": 113,
+  "same_verdicts": "472 out of 480",
+  "batch_cost": 0.0246,
+  "live_cost": 0.0496,
+  "batch_errors": []
+}

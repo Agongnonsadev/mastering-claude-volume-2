@@ -1,0 +1,134 @@
+{
+  "request": "Ce matin j'ai compté 32 bouteilles de jus de bissap. Mets le stock à jour.",
+  "gaps": [],
+  "output": {
+    "duration_api_ms": 4246,
+    "stop_reason": "end_turn",
+    "session_id": "323f93d7-9d4e-4216-8124-ce98458ba5c0",
+    "total_cost_usd": 0.0282032,
+    "usage": {
+      "input_tokens": 6,
+      "cache_creation_input_tokens": 7477,
+      "cache_read_input_tokens": 63087,
+      "output_tokens": 319,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 7477
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 108,
+          "cache_read_input_tokens": 23713,
+          "cache_creation_input_tokens": 294,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 294,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "modelUsage": {
+      "claude-sonnet-5-5": {
+        "inputTokens": 6,
+        "outputTokens": 319,
+        "cacheReadInputTokens": 63087,
+        "cacheCreationInputTokens": 7477,
+        "webSearchRequests": 0,
+        "costUSD": 0.0282032,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "thinkingTokens": 0,
+        "canonicalModel": "claude-sonnet-5-5",
+        "provider": "firstParty",
+        "costBasis": "list"
+      }
+    },
+    "permission_denials": [],
+    "terminal_reason": "completed",
+    "fast_mode_state": "off",
+    "fast_mode_disabled_reason": "sdk_opt_in_required",
+    "subagent_stats": {
+      "spawned": 0,
+      "requested": {
+        "background": 0,
+        "foreground": 0,
+        "unset": 0
+      },
+      "started_in_background": 0,
+      "max_depth": 0,
+      "spawned_by_subagents": 0,
+      "completed": 0,
+      "failed": 0,
+      "killed": {
+        "parent": 0,
+        "user": 0,
+        "system": 0
+      },
+      "refused": {
+        "depth_limit": 0,
+        "concurrency_limit": 0,
+        "budget": 0
+      },
+      "by_type": {}
+    },
+    "safety_stops": 0,
+    "is_error": false,
+    "num_turns": 3,
+    "subtype": "success",
+    "api_error_status": null,
+    "result": "Le Comptoir compte 40 bouteilles de jus de bissap, et vous en avez compté 32, soit 8 de moins. Voulez-vous que le stock passe à 32 ?\n\nJe ne modifie rien tant que vous n'avez pas confirmé. Cette proposition est valable 10 minutes.",
+    "ttft_ms": 1889,
+    "type": "result",
+    "duration_ms": 7262,
+    "uuid": "5b074fc6-542b-44c3-9219-136529b05515",
+    "ttft_stream_ms": 1343,
+    "time_to_request_ms": 130,
+    "time_to_request_phases_ms": {
+      "other": 26,
+      "system_prompt": 30,
+      "resume_other": 0,
+      "process_user_input": 4,
+      "input_attachments": 17,
+      "input_hooks": 4,
+      "tool_pool_refresh": 3,
+      "init_message": 7,
+      "engine_pickup": 1,
+      "message_prep": 1,
+      "model_config_wait": 2,
+      "autocompact": 3,
+      "query_setup": 1,
+      "model_gates": 0,
+      "tool_schema_build": 10,
+      "message_normalization": 3,
+      "client_creation": 8,
+      "request_build": 10
+    },
+    "turn_start_resume_kind": "none",
+    "process_turn_index": 0,
+    "time_to_request_loop_lag_ms": 77,
+    "time_to_request_cpu_ms": 109,
+    "time_to_request_major_faults": 3482,
+    "input_attachments_detail": {
+      "slowest_producer": "queued_commands",
+      "slowest_producer_ms": 11,
+      "cpu_ms": 16,
+      "major_faults": 372
+    },
+    "first_content_frame_ms": 1344,
+    "queued_turn_count": 0,
+    "result_index": 0
+  }
+}

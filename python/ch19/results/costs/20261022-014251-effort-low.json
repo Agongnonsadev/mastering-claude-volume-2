@@ -1,0 +1,590 @@
+{
+ "variant": "effort-low",
+ "settings": {
+  "comptoir_effort": "low"
+ },
+ "summary": {
+  "conversations": 24,
+  "messages": 42,
+  "total_cost": 0.0261,
+  "average_cost_per_conversation": 0.00109,
+  "average_cost_per_message": 0.00062,
+  "calls_per_message": 2.4,
+  "tokens": {
+   "input": 46854,
+   "cache_write": 9248,
+   "cache_read": 717209,
+   "output": 12601
+  },
+  "median_latency_s": 6.3,
+  "latency_p90_s": 7.9,
+  "orders_created": 6,
+  "errors": []
+ },
+ "conversations": [
+  {
+   "variant": "effort-low",
+   "id": "delivery-question",
+   "trial": 1,
+   "messages": 1,
+   "categories": [
+    "information"
+   ],
+   "cost_dollars": 0.000267,
+   "calls": 2,
+   "tokens": {
+    "input": 1155,
+    "cache_write": 0,
+    "cache_read": 9189,
+    "output": 119
+   },
+   "durations_ms": [
+    3396
+   ],
+   "orders": 0,
+   "errors": []
+  },
+  {
+   "variant": "effort-low",
+   "id": "confirmed-order",
+   "trial": 1,
+   "messages": 3,
+   "categories": [
+    "order",
+    "other",
+    "order"
+   ],
+   "cost_dollars": 0.001136,
+   "calls": 6,
+   "tokens": {
+    "input": 2244,
+    "cache_write": 631,
+    "cache_read": 53888,
+    "output": 588
+   },
+   "durations_ms": [
+    7701,
+    6531,
+    0
+   ],
+   "orders": 1,
+   "errors": []
+  },
+  {
+   "variant": "effort-low",
+   "id": "question-then-order",
+   "trial": 1,
+   "messages": 3,
+   "categories": [
+    "order",
+    "order",
+    "order"
+   ],
+   "cost_dollars": 0.00143,
+   "calls": 7,
+   "tokens": {
+    "input": 2269,
+    "cache_write": 923,
+    "cache_read": 67816,
+    "output": 819
+   },
+   "durations_ms": [
+    6470,
+    8128,
+    0
+   ],
+   "orders": 1,
+   "errors": []
+  },
+  {
+   "variant": "effort-low",
+   "id": "complaint",
+   "trial": 1,
+   "messages": 1,
+   "categories": [
+    "complaint"
+   ],
+   "cost_dollars": 0.002759,
+   "calls": 4,
+   "tokens": {
+    "input": 3148,
+    "cache_write": 0,
+    "cache_read": 0,
+    "output": 424
+   },
+   "durations_ms": [
+    6240
+   ],
+   "orders": 0,
+   "errors": []
+  },
+  {
+   "variant": "effort-low",
+   "id": "wedding-quote",
+   "trial": 1,
+   "messages": 2,
+   "categories": [
+    "order",
+    "order"
+   ],
+   "cost_dollars": 0.001468,
+   "calls": 6,
+   "tokens": {
+    "input": 2268,
+    "cache_write": 1016,
+    "cache_read": 54370,
+    "output": 1140
+   },
+   "durations_ms": [
+    7068,
+    7099
+   ],
+   "orders": 0,
+   "errors": []
+  },
+  {
+   "variant": "effort-low",
+   "id": "discount",
+   "trial": 1,
+   "messages": 1,
+   "categories": [
+    "order"
+   ],
+   "cost_dollars": 0.000681,
+   "calls": 3,
+   "tokens": {
+    "input": 1130,
+    "cache_write": 385,
+    "cache_read": 26662,
+    "output": 506
+   },
+   "durations_ms": [
+    7530
+   ],
+   "orders": 0,
+   "errors": []
+  },
+  {
+   "variant": "effort-low",
+   "id": "out-of-zone",
+   "trial": 1,
+   "messages": 2,
+   "categories": [
+    "information",
+    "information"
+   ],
+   "cost_dollars": 0.000539,
+   "calls": 4,
+   "tokens": {
+    "input": 2286,
+    "cache_write": 0,
+    "cache_read": 18378,
+    "output": 254
+   },
+   "durations_ms": [
+    2559,
+    2324
+   ],
+   "orders": 0,
+   "errors": []
+  },
+  {
+   "variant": "effort-low",
+   "id": "thanks",
+   "trial": 1,
+   "messages": 1,
+   "categories": [
+    "other"
+   ],
+   "cost_dollars": 0.000335,
+   "calls": 2,
+   "tokens": {
+    "input": 1115,
+    "cache_write": 0,
+    "cache_read": 13318,
+    "output": 180
+   },
+   "durations_ms": [
+    3446
+   ],
+   "orders": 0,
+   "errors": []
+  },
+  {
+   "variant": "effort-low",
+   "id": "delivery-question",
+   "trial": 2,
+   "messages": 1,
+   "categories": [
+    "information"
+   ],
+   "cost_dollars": 0.000267,
+   "calls": 2,
+   "tokens": {
+    "input": 1155,
+    "cache_write": 0,
+    "cache_read": 9189,
+    "output": 119
+   },
+   "durations_ms": [
+    2929
+   ],
+   "orders": 0,
+   "errors": []
+  },
+  {
+   "variant": "effort-low",
+   "id": "confirmed-order",
+   "trial": 2,
+   "messages": 3,
+   "categories": [
+    "order",
+    "other",
+    "order"
+   ],
+   "cost_dollars": 0.0013,
+   "calls": 6,
+   "tokens": {
+    "input": 2244,
+    "cache_write": 866,
+    "cache_read": 54136,
+    "output": 852
+   },
+   "durations_ms": [
+    7921,
+    6399,
+    0
+   ],
+   "orders": 1,
+   "errors": []
+  },
+  {
+   "variant": "effort-low",
+   "id": "question-then-order",
+   "trial": 2,
+   "messages": 3,
+   "categories": [
+    "order",
+    "order",
+    "order"
+   ],
+   "cost_dollars": 0.001471,
+   "calls": 6,
+   "tokens": {
+    "input": 2267,
+    "cache_write": 1123,
+    "cache_read": 53988,
+    "output": 1129
+   },
+   "durations_ms": [
+    6372,
+    7412,
+    0
+   ],
+   "orders": 1,
+   "errors": []
+  },
+  {
+   "variant": "effort-low",
+   "id": "complaint",
+   "trial": 2,
+   "messages": 1,
+   "categories": [
+    "complaint"
+   ],
+   "cost_dollars": 0.002797,
+   "calls": 4,
+   "tokens": {
+    "input": 3151,
+    "cache_write": 0,
+    "cache_read": 0,
+    "output": 441
+   },
+   "durations_ms": [
+    6636
+   ],
+   "orders": 0,
+   "errors": []
+  },
+  {
+   "variant": "effort-low",
+   "id": "wedding-quote",
+   "trial": 2,
+   "messages": 2,
+   "categories": [
+    "order",
+    "order"
+   ],
+   "cost_dollars": 0.001407,
+   "calls": 6,
+   "tokens": {
+    "input": 2268,
+    "cache_write": 947,
+    "cache_read": 54379,
+    "output": 1037
+   },
+   "durations_ms": [
+    7217,
+    6569
+   ],
+   "orders": 0,
+   "errors": []
+  },
+  {
+   "variant": "effort-low",
+   "id": "discount",
+   "trial": 2,
+   "messages": 1,
+   "categories": [
+    "order"
+   ],
+   "cost_dollars": 0.000773,
+   "calls": 3,
+   "tokens": {
+    "input": 1130,
+    "cache_write": 474,
+    "cache_read": 26662,
+    "output": 668
+   },
+   "durations_ms": [
+    8424
+   ],
+   "orders": 0,
+   "errors": []
+  },
+  {
+   "variant": "effort-low",
+   "id": "out-of-zone",
+   "trial": 2,
+   "messages": 2,
+   "categories": [
+    "information",
+    "information"
+   ],
+   "cost_dollars": 0.000528,
+   "calls": 4,
+   "tokens": {
+    "input": 2286,
+    "cache_write": 0,
+    "cache_read": 18378,
+    "output": 232
+   },
+   "durations_ms": [
+    2624,
+    2285
+   ],
+   "orders": 0,
+   "errors": []
+  },
+  {
+   "variant": "effort-low",
+   "id": "thanks",
+   "trial": 2,
+   "messages": 1,
+   "categories": [
+    "other"
+   ],
+   "cost_dollars": 0.000327,
+   "calls": 2,
+   "tokens": {
+    "input": 1115,
+    "cache_write": 0,
+    "cache_read": 13318,
+    "output": 165
+   },
+   "durations_ms": [
+    3101
+   ],
+   "orders": 0,
+   "errors": []
+  },
+  {
+   "variant": "effort-low",
+   "id": "delivery-question",
+   "trial": 3,
+   "messages": 1,
+   "categories": [
+    "information"
+   ],
+   "cost_dollars": 0.000266,
+   "calls": 2,
+   "tokens": {
+    "input": 1155,
+    "cache_write": 0,
+    "cache_read": 9189,
+    "output": 118
+   },
+   "durations_ms": [
+    2761
+   ],
+   "orders": 0,
+   "errors": []
+  },
+  {
+   "variant": "effort-low",
+   "id": "confirmed-order",
+   "trial": 3,
+   "messages": 3,
+   "categories": [
+    "order",
+    "other",
+    "order"
+   ],
+   "cost_dollars": 0.001145,
+   "calls": 6,
+   "tokens": {
+    "input": 2244,
+    "cache_write": 614,
+    "cache_read": 53820,
+    "output": 612
+   },
+   "durations_ms": [
+    6143,
+    6327,
+    0
+   ],
+   "orders": 1,
+   "errors": []
+  },
+  {
+   "variant": "effort-low",
+   "id": "question-then-order",
+   "trial": 3,
+   "messages": 3,
+   "categories": [
+    "order",
+    "order",
+    "order"
+   ],
+   "cost_dollars": 0.001456,
+   "calls": 7,
+   "tokens": {
+    "input": 2269,
+    "cache_write": 954,
+    "cache_read": 67925,
+    "output": 861
+   },
+   "durations_ms": [
+    6300,
+    8213,
+    0
+   ],
+   "orders": 1,
+   "errors": []
+  },
+  {
+   "variant": "effort-low",
+   "id": "complaint",
+   "trial": 3,
+   "messages": 1,
+   "categories": [
+    "complaint"
+   ],
+   "cost_dollars": 0.002787,
+   "calls": 4,
+   "tokens": {
+    "input": 3156,
+    "cache_write": 0,
+    "cache_read": 0,
+    "output": 325
+   },
+   "durations_ms": [
+    7441
+   ],
+   "orders": 0,
+   "errors": []
+  },
+  {
+   "variant": "effort-low",
+   "id": "wedding-quote",
+   "trial": 3,
+   "messages": 2,
+   "categories": [
+    "order",
+    "order"
+   ],
+   "cost_dollars": 0.00139,
+   "calls": 6,
+   "tokens": {
+    "input": 2268,
+    "cache_write": 881,
+    "cache_read": 54246,
+    "output": 1021
+   },
+   "durations_ms": [
+    6848,
+    7106
+   ],
+   "orders": 0,
+   "errors": []
+  },
+  {
+   "variant": "effort-low",
+   "id": "discount",
+   "trial": 3,
+   "messages": 1,
+   "categories": [
+    "order"
+   ],
+   "cost_dollars": 0.000711,
+   "calls": 3,
+   "tokens": {
+    "input": 1130,
+    "cache_write": 434,
+    "cache_read": 26662,
+    "output": 555
+   },
+   "durations_ms": [
+    7971
+   ],
+   "orders": 0,
+   "errors": []
+  },
+  {
+   "variant": "effort-low",
+   "id": "out-of-zone",
+   "trial": 3,
+   "messages": 2,
+   "categories": [
+    "information",
+    "information"
+   ],
+   "cost_dollars": 0.000539,
+   "calls": 4,
+   "tokens": {
+    "input": 2286,
+    "cache_write": 0,
+    "cache_read": 18378,
+    "output": 253
+   },
+   "durations_ms": [
+    3429,
+    2164
+   ],
+   "orders": 0,
+   "errors": []
+  },
+  {
+   "variant": "effort-low",
+   "id": "thanks",
+   "trial": 3,
+   "messages": 1,
+   "categories": [
+    "other"
+   ],
+   "cost_dollars": 0.000336,
+   "calls": 2,
+   "tokens": {
+    "input": 1115,
+    "cache_write": 0,
+    "cache_read": 13318,
+    "output": 183
+   },
+   "durations_ms": [
+    4837
+   ],
+   "orders": 0,
+   "errors": []
+  }
+ ]
+}

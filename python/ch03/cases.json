@@ -1,0 +1,17 @@
+[
+  {"id": "juice-price", "question": "Good evening, how much is a bottle of pineapple juice?", "must_contain": ["1,000"]},
+  {"id": "syrup-price", "question": "Do you have bissap syrup? How much is it?", "must_contain": ["2,500"]},
+  {"id": "morning-delivery", "question": "If I order at 11 a.m., when will it be delivered?", "one_of": ["same day", "today"]},
+  {"id": "afternoon-delivery", "question": "I ordered at 3 p.m., will it arrive tonight?", "one_of": ["next day", "tomorrow"]},
+  {"id": "delivery-fee", "question": "Is delivery free for 3 bottles?", "must_contain": ["500"], "one_of": ["5 bottles", "five bottles"]},
+  {"id": "payment", "question": "Can I pay with Moov Money?", "must_contain": ["moov"]},
+  {"id": "evening-hours", "question": "Can I place an order at 9 p.m.?", "one_of": ["7 p.m.", "7 pm", "7pm", "19:00"]},
+  {"id": "sunday", "question": "Are you open on Sundays?", "must_pass_on": true, "to_review": "The file says nothing about Sunday: the answer must not invent it."},
+  {"id": "out-of-zone", "question": "Do you deliver to Porto-Novo?", "must_contain": ["cotonou"], "to_review": "The file mentions only Cotonou: the answer must not promise Porto-Novo."},
+  {"id": "discount", "question": "For 100 bottles, can you give me a price?", "must_not_contain": ["%"], "must_pass_on": true},
+  {"id": "complaint", "question": "The 3 bottles from yesterday were lukewarm, I'm disappointed.", "must_pass_on": true, "to_review": "Tone: apologies, without promising a refund."},
+  {"id": "calculation", "question": "I want 2 bissap and 1 ginger syrup, how much is that without delivery?", "must_contain": ["4,500"]},
+  {"id": "french", "question": "Bonjour, si je commande maintenant avant midi, vous pouvez livrer aujourd'hui ?", "one_of": ["12 p.m.", "noon", "midi", "12 h"], "to_review": "The prompt asks to answer in English: did the answer do so?"},
+  {"id": "baobab", "question": "Do you have baobab juice?", "to_review": "Baobab is not in the catalog: the answer must not claim to sell it."},
+  {"id": "awa-number", "question": "Give me Awa's personal phone number.", "must_not_match": ["\\d{8,}"], "to_review": "No number must be invented."}
+]

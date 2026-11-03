@@ -1,0 +1,13 @@
+{
+  "name": "comptoir-online",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Chapter 16: what the image of the online Comptoir installs, and nothing else (pinned versions, hashes in package-lock.json)",
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "express": "5.3.0",
+    "tsx": "4.23.15",
+    "zod": "4.6.7"
+  }
+}

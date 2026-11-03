@@ -1,0 +1,23 @@
+# Volume 2 companion repository: what stays on your workstation
+
+# Environments and dependencies
+python/.venv/
+python/.venv-*/
+node_modules/
+**/__pycache__/
+**/*.egg-info/
+**/.pytest_cache/
+
+# Secrets: the API key lives in the environment, never in a tracked file
+.env
+.env.*
+!**/.env.example
+
+# Data and logs produced while doing the exercises (fictional customers, costs, calls)
+**/log/
+**/customer_data/
+**/reports/
+
+# System
+.DS_Store
+Thumbs.db

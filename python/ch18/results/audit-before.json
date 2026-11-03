@@ -1,0 +1,59 @@
+{
+ "date": "2026-10-21T20:16:29+00:00",
+ "results": {
+  "6. A new conversation at each message": {
+   "messages_accepted": 512,
+   "stop": "error",
+   "spending_of_the_day_dollars": 1.28,
+   "calls_to_claude": 512,
+   "a_real_customer_afterwards": "error",
+   "verdict": "flaw",
+   "duration_s": 4.6
+  },
+  "7. Burst and giant body": {
+   "burst_accepted": "52 out of 60 in 0.4 s",
+   "text_of_10000_characters": 422,
+   "body_of_3_mb": 422,
+   "body_of_3_mb_handled_in_s": 0.038,
+   "verdict": "flaw",
+   "duration_s": 0.44
+  },
+  "8. HTML in the answer": {
+   "html_received_as_text": true,
+   "dangerous_insertions_in_the_page": [],
+   "verdict": "held",
+   "duration_s": 0.07
+  },
+  "9. Another customer's conversation": {
+   "guessed_ids_accepted": 0,
+   "victim_s_summary": [
+    "pending"
+   ],
+   "tools_available": "stock_check, order_prepare, pass_to_awa (none reads another conversation)",
+   "verdict": "held",
+   "duration_s": 0.04
+  },
+  "10. The API key": {
+   "keys_in_the_tracked_files": 0,
+   "keys_in_the_git_history": 0,
+   "local_files_with_a_key": [],
+   "env_ignored_by_git": true,
+   "verdict": "held",
+   "duration_s": 5.31
+  },
+  "C1. Data kept beyond 30 days": {
+   "calls_to_purge_in_the_application": [],
+   "shop_tables_never_purged": [
+    "summaries",
+    "requests"
+   ],
+   "verdict": "flaw",
+   "duration_s": 0.05
+  },
+  "C2. Does the customer know they are talking to an AI?": {
+   "disclosure_in_the_page": false,
+   "verdict": "flaw",
+   "duration_s": 0.0
+  }
+ }
+}

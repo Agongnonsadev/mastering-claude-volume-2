@@ -1,0 +1,14 @@
+# Chapter 16: what Docker must not receive to build an image. Neither the local dependencies, nor customer
+# data, nor the logs, nor the secrets.
+node_modules/
+**/node_modules/
+.env
+**/.env
+customer_data/
+log/
+reports/
+**/results/
+tests/
+ch15/build/
+**/data/
+*.sqlite3

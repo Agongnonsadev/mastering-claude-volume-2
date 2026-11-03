@@ -1,0 +1,102 @@
+# Chapter 20: on each pull request to main, the regression of chapter 17 and a review by Claude.
+# PAID: about $0.03 for the regression (capped at $0.30), plus the cost of the review.
+#
+# No API key in the repository nor in its secrets: Workload Identity Federation exchanges GitHub's OIDC
+# token for short-lived access to the API, through a Console service account. To set up once, in the
+# Console (Workload identity page, GitHub Actions tile) and in the repository variables
+# (Settings > Secrets and variables > Actions > Variables):
+#   ANTHROPIC_ORGANIZATION_ID, ANTHROPIC_FEDERATION_RULE_ID, ANTHROPIC_SERVICE_ACCOUNT_ID, ANTHROPIC_WORKSPACE_ID
+# The federation rule is limited to this repository (subject_prefix “repo:<account>/<repository>:pull_request”).
+name: Claude on the pull request
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: claude-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+env:
+  ANTHROPIC_ORGANIZATION_ID: ${{ vars.ANTHROPIC_ORGANIZATION_ID }}
+  ANTHROPIC_FEDERATION_RULE_ID: ${{ vars.ANTHROPIC_FEDERATION_RULE_ID }}
+  ANTHROPIC_SERVICE_ACCOUNT_ID: ${{ vars.ANTHROPIC_SERVICE_ACCOUNT_ID }}
+  ANTHROPIC_WORKSPACE_ID: ${{ vars.ANTHROPIC_WORKSPACE_ID }}
+
+jobs:
+  regression:
+    # A request coming from a copy of the repository (fork) does not make Awa spend; neither does a draft.
+    if: github.event.pull_request.head.repo.full_name == github.repository && !github.event.pull_request.draft
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      id-token: write   # to request GitHub's OIDC token
+    defaults:
+      run:
+        working-directory: python
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+      - name: Install
+        run: pip install -e ".[tests]"
+      - name: Regression (33 cases, ceiling $0.30)
+        env:
+          ANTHROPIC_IDENTITY_TOKEN_FILE: ${{ runner.temp }}/github-token
+        run: |
+          # GitHub's token expires after about 5 minutes: it is renewed during the series, and the
+          # SDK rereads the file when it refreshes its access (Workload Identity Federation documentation).
+          token() {
+            curl -sS -H "Authorization: Bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
+              "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=https://api.anthropic.com" \
+              | jq -r .value > "$ANTHROPIC_IDENTITY_TOKEN_FILE"
+          }
+          token
+          ( while sleep 240; do token; done ) &
+          python -m ch17.evaluate regression --max-budget 0.3
+
+  review:
+    if: github.event.pull_request.head.repo.full_name == github.repository && !github.event.pull_request.draft
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      pull-requests: write   # the review comments
+      id-token: write        # Workload Identity Federation, and the authentication of Claude's GitHub app
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - name: The review instructions come from main, not from the pull request
+        # The action restores .claude/ and CLAUDE.md from the base branch at the root, not in python/: we do it
+        # ourselves, so that a pull request cannot rewrite the instructions of its own reviewer.
+        run: |
+          for path in python/.claude python/CLAUDE.md; do
+            if git cat-file -e "origin/${{ github.base_ref }}:$path" 2>/dev/null; then
+              rm -rf "$path" && git checkout "origin/${{ github.base_ref }}" -- "$path"
+            else
+              rm -rf "$path"   # absent from main: the pull request does not bring its own instructions
+            fi
+          done
+      - uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_organization_id: ${{ vars.ANTHROPIC_ORGANIZATION_ID }}
+          anthropic_federation_rule_id: ${{ vars.ANTHROPIC_FEDERATION_RULE_ID }}
+          anthropic_service_account_id: ${{ vars.ANTHROPIC_SERVICE_ACCOUNT_ID }}
+          anthropic_workspace_id: ${{ vars.ANTHROPIC_WORKSPACE_ID }}
+          prompt: |
+            /peer-review origin/${{ github.base_ref }}...HEAD
+
+            Then, for each “To fix” point of the report, post an inline comment on the pull request,
+            in English, at the line concerned. If there are none, post nothing.
+          claude_args: |
+            --add-dir python
+            --model sonnet
+            --max-turns 30
+            --allowedTools "mcp__github_inline_comment__create_inline_comment,Bash(git diff *),Bash(git log *)"
